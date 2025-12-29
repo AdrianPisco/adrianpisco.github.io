@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <link rel="canonical" href="https://adrianpisco.github.io/" />
+
   <!-- =========================================================
        METADATOS BÁSICOS + SEO
   ========================================================== -->
@@ -15,8 +16,8 @@
   />
 
   <!-- =========================================================
-     OPEN GRAPH
-========================================================== -->
+       OPEN GRAPH
+  ========================================================== -->
   <meta property="og:title" content="YACHAY.dev | Adrian Pisco" />
   <meta property="og:description" content="Portafolio de Adrian Pisco enfocado en backend, lógica y arquitectura de software." />
   <meta property="og:image" content="https://adrianpisco.github.io/assets/og-image.png" />
@@ -49,31 +50,25 @@
   <link rel="stylesheet" href="css/responsive.css" />
 
   <!-- =========================================================
-     FAVICON + ICONOS (NITIDOS)
-========================================================== -->
-<link rel="icon" href="assets/favicon.ico" />
-
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
-
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-
-<meta name="theme-color" content="#0b1220" />
-<link rel="manifest" href="site.webmanifest" />
-
+       FAVICON + ICONOS
+  ========================================================== -->
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="manifest" href="site.webmanifest" />
 </head>
 
 <body>
 
-  <!-- Fondo global -->
   <div class="bg-terminal" aria-hidden="true"></div>
 
   <!-- =========================================================
-       HEADER / NAV
+       HEADER
   ========================================================== -->
   <header class="header">
-    <nav class="nav container" aria-label="Navegación principal">
-
+    <nav class="nav container">
       <a href="#top" class="logo" id="top">
         <span class="logo-mark">Y</span>
         <span class="logo-text">yachay.dev</span>
@@ -85,21 +80,16 @@
         <li><a href="#projects">Proyectos</a></li>
         <li><a href="#contact">Contacto</a></li>
       </ul>
-
     </nav>
   </header>
 
-  <!-- =========================================================
-       MAIN
-  ========================================================== -->
   <main id="main">
 
     <!-- =========================================================
-         HERO / TERMINAL
+         HERO
     ========================================================== -->
     <section class="hero container hero-grid reveal">
 
-      <!-- TERMINAL -->
       <div class="hero-panel">
         <div class="terminal">
 
@@ -111,23 +101,11 @@
           </div>
 
           <div class="terminal-body">
+            <p class="terminal-line"><span class="prompt">></span> inicializando perfil...</p>
+            <p class="terminal-line"><span class="prompt">></span> usuario: <span class="mono">Adrian</span></p>
+            <p class="terminal-line"><span class="prompt">></span> enfoque: <span class="mono">backend · lógica · sistemas</span></p>
 
-            <p class="terminal-line">
-              <span class="prompt">></span> inicializando perfil...
-            </p>
-
-            <p class="terminal-line">
-              <span class="prompt">></span> usuario: <span class="mono">Adrian</span>
-            </p>
-
-            <p class="terminal-line">
-              <span class="prompt">></span> enfoque: <span class="mono">backend · lógica · sistemas</span>
-              <span class="terminal-cursor">_</span>
-            </p>
-
-            <h1 class="hero-title">
-              YACHAY<span class="hero-name">.dev</span>
-            </h1>
+            <h1 class="hero-title">YACHAY<span class="hero-name">.dev</span></h1>
 
             <p class="hero-subtitle">
               Estudiante de Ingeniería de Sistemas con enfoque en desarrollo backend,
@@ -139,34 +117,20 @@
               <a class="btn outline" href="#contact">Contactar</a>
             </div>
 
-            <!-- LINKS -->
             <div class="hero-links">
               <a class="link-chip" href="https://www.linkedin.com/in/adrian-ivan-pisco-soto-857235194" target="_blank">LinkedIn</a>
               <a class="link-chip" href="mailto:adrianpisco16@outlook.com">Email</a>
             </div>
-
           </div>
+
         </div>
       </div>
 
-      <!-- HUD FOTO -->
       <div class="hero-hud">
         <div class="hud-frame">
-
-          <img
-            src="assets/AdrianPisco.jpg"
-            alt="Foto de Adrian"
-            class="hud-photo"
-            loading="lazy"
-          />
-
-          <div class="hud-scan" aria-hidden="true"></div>
-          <div class="hud-corners" aria-hidden="true"></div>
-
-          <div class="hud-tag">
-            <span class="mono">STATUS:</span> ACTIVE
-          </div>
-
+          <img src="assets/AdrianPisco.jpg" alt="Foto de Adrian" class="hud-photo" />
+          <div class="hud-scan"></div>
+          <div class="hud-tag"><span class="mono">STATUS:</span> ACTIVE</div>
         </div>
       </div>
 
@@ -176,19 +140,15 @@
          ABOUT
     ========================================================== -->
     <section id="about" class="section container reveal">
-
       <h2 class="section-title">Sobre mí</h2>
 
       <p class="section-text">
         Soy estudiante de Ingeniería de Sistemas con una fuerte inclinación hacia el
-        desarrollo backend y la lógica de programación. Me caracterizo por aprender
-        rápido, analizar con profundidad y construir soluciones claras y mantenibles.
+        desarrollo backend y la lógica de programación.
       </p>
 
       <p class="section-text">
-        Mi mayor motivación para seguir creciendo en el mundo tecnológico es mi madre,
-        quien me enseñó el valor del esfuerzo constante y la importancia de nunca dejar
-        de aprender.
+        Mi mayor motivación para seguir creciendo en el mundo tecnológico es mi madre.
       </p>
 
       <div class="hobbies-grid">
@@ -198,72 +158,97 @@
         <span class="chip">Lectura</span>
         <span class="chip">Artes marciales</span>
       </div>
-
     </section>
 
     <!-- =========================================================
          SKILLS
     ========================================================== -->
     <section id="skills" class="section container reveal">
-
       <h2 class="section-title">Habilidades</h2>
 
       <div class="grid skills-grid">
-
-        <article class="card">
-          <h3>Backend</h3>
-          <p>Java, POO, servicios, validaciones, arquitectura por capas.</p>
-        </article>
-
-        <article class="card">
-          <h3>Bases de datos</h3>
-          <p>SQL Server, diseño ER, consultas, integridad y reportes.</p>
-        </article>
-
-        <article class="card">
-          <h3>Aprendizaje</h3>
-          <p>Interés constante en nuevas tecnologías y buenas prácticas.</p>
-        </article>
-
+        <article class="card"><h3>Backend</h3><p>Java, POO, arquitectura por capas.</p></article>
+        <article class="card"><h3>Bases de datos</h3><p>SQL Server, ER, consultas.</p></article>
+        <article class="card"><h3>Aprendizaje</h3><p>Buenas prácticas y mejora continua.</p></article>
       </div>
-
     </section>
 
     <!-- =========================================================
-         PROJECTS
+         PROJECTS — CAROUSEL
     ========================================================== -->
     <section id="projects" class="section container reveal">
 
       <h2 class="section-title">Proyectos</h2>
 
-      <div class="projects-grid">
+      <div class="projects-carousel">
+        <button class="carousel-btn prev">‹</button>
 
-        <article class="card project-card">
-          <img
-            src="assets/ferreteriaSoto.jpg"
-            alt="FerreSys"
-            class="project-image"
-            loading="lazy"
-          />
+        <div class="projects-track">
 
-          <h3 class="project-title">FerreSys</h3>
+          <article class="project-card">
+            <img src="assets/proyecto-ventas.png" alt="Sistema de Ventas" />
+            <h3>Sistema de Ventas</h3>
+            <p class="project-description">
+              Aplicación desarrollada en Java para registrar ventas diarias,
+              calcular totales automáticamente y reducir errores comunes
+              del registro manual en pequeños negocios.
+            </p>
+            <button class="btn small outline disabled" disabled>Repositorio (próximamente)</button>
+          </article>
 
-          <p class="project-description">
-            Sistema desktop desarrollado en Java con arquitectura por capas, gestión de usuarios por roles, 
-            auditoría de acciones y persistencia en SQL Server.
-          </p>
+          <article class="project-card">
+            <img src="assets/gestor-usuarios.png" alt="Gestor de Usuarios" />
+            <h3>Gestor de Usuarios con Roles</h3>
+            <p class="project-description">
+              Sistema que administra usuarios según roles y permisos,
+              evitando accesos no autorizados y asegurando un control lógico.
+            </p>
+            <button class="btn small outline disabled" disabled>Repositorio (próximamente)</button>
+          </article>
 
-          <a
-            class="btn small outline"
-            href="https://github.com/AdrianPisco/ferresys.git"
-            target="_blank"
-          >
-            Ver repositorio
-          </a>
-        </article>
+          <article class="project-card active">
+            <img src="assets/ferreteriaSoto.jpg" alt="FerreSys" />
+            <h3>FerreSys</h3>
+            <p class="project-description">
+              Sistema desktop desarrollado en Java con arquitectura por capas,
+              control de ventas, stock, roles y auditoría.
+            </p>
+            <a class="btn small outline" href="https://github.com/AdrianPisco/ferresys.git" target="_blank">
+              Ver repositorio
+            </a>
+          </article>
 
+          <article class="project-card">
+            <img src="assets/dashboard-reportes.png" alt="Dashboard de Reportes" />
+            <h3>Dashboard Web de Reportes</h3>
+            <p class="project-description">
+              Visualización clara de información para facilitar la toma de decisiones.
+            </p>
+            <button class="btn small outline disabled" disabled>Repositorio (próximamente)</button>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/crud-productos.png" alt="CRUD de Productos" />
+            <h3>CRUD Web de Productos</h3>
+            <p class="project-description">
+              Gestión de productos con validaciones y organización eficiente.
+            </p>
+            <button class="btn small outline disabled" disabled>Repositorio (próximamente)</button>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/sistema-academico.png" alt="Sistema Académico" />
+            <h3>Sistema Académico</h3>
+            <p class="project-description">
+              Registro de alumnos y cursos para reducir errores administrativos.
+            </p>
+            <button class="btn small outline disabled" disabled>Repositorio (próximamente)</button>
+          </article>
+
+        </div>
+
+        <button class="carousel-btn next">›</button>
       </div>
-
     </section>
 
     <!-- =========================================================
@@ -275,21 +260,23 @@
 
       <p class="contact-cta-text">
         Aprendo rápido, soy constante y me tomo en serio cada proyecto.
-        Si buscas compromiso y crecimiento real, podemos trabajar juntos.
       </p>
 
       <div class="contact-actions">
-        <a class="btn primary" href="mailto:adrianpisco16@outlook.com">Escríbeme</a>
-        <a class="btn outline" href="#projects">Ver mi trabajo</a>
-      </div>
 
+        <a class="btn primary" href="mailto:adrianpisco16@outlook.com">
+          Escríbeme
+        </a>
+
+        <a class="btn outline" href="#projects">
+          Ver mi trabajo
+        </a>
+
+      </div>
     </section>
 
   </main>
 
-  <!-- =========================================================
-       FOOTER
-  ========================================================== -->
   <footer class="footer">
     <div class="container footer-inner">
       <p>© <span id="year"></span> YACHAY.dev</p>
@@ -298,5 +285,27 @@
   </footer>
 
   <script src="js/main.js" defer></script>
+
+  <!-- =========================================================
+     WHATSAPP FLOATING BUTTON
+========================================================== -->
+<a
+  href="https://wa.me/51945834043?text=Hola%20Adrian,%20vi%20tu%20portafolio%20y%20me%20gustaría%20contactarte"
+  target="_blank"
+  rel="noopener"
+  class="whatsapp-float"
+  aria-label="Contactar por WhatsApp"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    width="26"
+    height="26"
+    fill="currentColor"
+  >
+    <path d="M16.01 2.003c-7.732 0-14.01 6.278-14.01 14.01 0 2.482.654 4.91 1.898 7.058l-1.995 7.285 7.464-1.959c2.06 1.126 4.375 1.718 6.643 1.718 7.731 0 14.01-6.278 14.01-14.01s-6.279-14.01-14.01-14.01z"/>
+  </svg>
+</a>
+
 </body>
 </html>

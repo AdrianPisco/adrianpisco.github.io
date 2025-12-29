@@ -132,3 +132,92 @@
     year.textContent = new Date().getFullYear();
   }
 })();
+
+const track = document.querySelector('.projects-track');
+const cards = Array.from(document.querySelectorAll('.project-card'));
+const nextBtn = document.querySelector('.carousel-btn.next');
+const prevBtn = document.querySelector('.carousel-btn.prev');
+
+let current = 2; // empieza en el centro
+
+function updateCarousel() {
+  cards.forEach((card, i) => {
+    card.classList.toggle('active', i === current);
+  });
+
+  const cardWidth = cards[0].offsetWidth + 24;
+  const offset = -(current - 2) * cardWidth;
+
+  track.style.transform = `translateX(${offset}px)`;
+}
+
+nextBtn.addEventListener('click', () => {
+  if (current < cards.length - 1) {
+    current++;
+    updateCarousel();
+  }
+});
+
+prevBtn.addEventListener('click', () => {
+  if (current > 0) {
+    current--;
+    updateCarousel();
+  }
+});
+
+updateCarousel();
+
+/* =========================================================
+   PROJECTS CAROUSEL — CONTROL DE LÍMITES
+========================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const track = document.querySelector(".projects-track");
+  const cards = Array.from(document.querySelectorAll(".project-card"));
+  const btnPrev = document.querySelector(".carousel-btn.prev");
+  const btnNext = document.querySelector(".carousel-btn.next");
+
+  if (!track || cards.length === 0) return;
+
+  let currentIndex = cards.findIndex(card =>
+    card.classList.contains("active")
+  );
+
+  if (currentIndex === -1) currentIndex = 0;
+
+  const updateCarousel = () => {
+    cards.forEach((card, index) => {
+      card.classList.toggle("active", index === currentIndex);
+    });
+
+    const cardWidth = cards[0].offsetWidth;
+    const gap = 32; // ajusta si cambias el gap en CSS
+
+    track.style.transform =
+      `translateX(${-currentIndex * (cardWidth + gap)}px)`;
+
+    // DESACTIVAR BOTONES EN LOS EXTREMOS
+    btnPrev.disabled = currentIndex === 0;
+    btnNext.disabled = currentIndex === cards.length - 1;
+
+    btnPrev.classList.toggle("disabled", btnPrev.disabled);
+    btnNext.classList.toggle("disabled", btnNext.disabled);
+  };
+
+  btnPrev.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    }
+  });
+
+  btnNext.addEventListener("click", () => {
+    if (currentIndex < cards.length - 1) {
+      currentIndex++;
+      updateCarousel();
+    }
+  });
+
+  updateCarousel();
+});
