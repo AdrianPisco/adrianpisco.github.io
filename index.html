@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- =========================================================
+       METADATOS BÁSICOS + SEO
+  ========================================================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>YACHAY.dev | Adrian</title>
+  <meta
+    name="description"
+    content="YACHAY.dev — Portafolio futurista de Adrian. Estudiante de Ingeniería de Sistemas enfocado en backend, lógica y arquitectura de software."
+  />
+
+  <!-- =========================================================
+       TIPOGRAFÍA
+  ========================================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- =========================================================
+       CSS
+  ========================================================== -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+
+  <!-- Fondo global -->
+  <div class="bg-terminal" aria-hidden="true"></div>
+
+  <!-- =========================================================
+       HEADER / NAV
+  ========================================================== -->
+  <header class="header">
+    <nav class="nav container" aria-label="Navegación principal">
+
+      <a href="#top" class="logo" id="top">
+        <span class="logo-mark">Y</span>
+        <span class="logo-text">yachay.dev</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <!-- =========================================================
+       MAIN
+  ========================================================== -->
+  <main id="main">
+
+    <!-- =========================================================
+         HERO / TERMINAL
+    ========================================================== -->
+    <section class="hero container hero-grid reveal">
+
+      <!-- TERMINAL -->
+      <div class="hero-panel">
+        <div class="terminal">
+
+          <div class="terminal-bar">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+            <span class="terminal-title">system://boot</span>
+          </div>
+
+          <div class="terminal-body">
+
+            <p class="terminal-line">
+              <span class="prompt">></span> inicializando perfil...
+            </p>
+
+            <p class="terminal-line">
+              <span class="prompt">></span> usuario: <span class="mono">Adrian</span>
+            </p>
+
+            <p class="terminal-line">
+              <span class="prompt">></span> enfoque: <span class="mono">backend · lógica · sistemas</span>
+              <span class="terminal-cursor">_</span>
+            </p>
+
+            <h1 class="hero-title">
+              YACHAY<span class="hero-name">.dev</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Estudiante de Ingeniería de Sistemas con enfoque en desarrollo backend,
+              arquitectura por capas y resolución lógica de problemas.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn primary" href="#projects">Ver proyectos</a>
+              <a class="btn outline" href="#contact">Contactar</a>
+            </div>
+
+            <!-- LINKS -->
+            <div class="hero-links">
+              <a class="link-chip" href="#" target="_blank">LinkedIn</a>
+              <a class="link-chip" href="#" target="_blank">GitHub</a>
+              <a class="link-chip" href="mailto:adrianpisco16@outlook.com">Email</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- HUD FOTO -->
+      <div class="hero-hud">
+        <div class="hud-frame">
+
+          <img
+            src="assets/img/programadorPisco.jpg"
+            alt="Foto de Adrian"
+            class="hud-photo"
+            loading="lazy"
+          />
+
+          <div class="hud-scan" aria-hidden="true"></div>
+          <div class="hud-corners" aria-hidden="true"></div>
+
+          <div class="hud-tag">
+            <span class="mono">STATUS:</span> ACTIVE
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- =========================================================
+         ABOUT
+    ========================================================== -->
+    <section id="about" class="section container reveal">
+
+      <h2 class="section-title">Sobre mí</h2>
+
+      <p class="section-text">
+        Soy estudiante de Ingeniería de Sistemas con una fuerte inclinación hacia el
+        desarrollo backend y la lógica de programación. Me caracterizo por aprender
+        rápido, analizar con profundidad y construir soluciones claras y mantenibles.
+      </p>
+
+      <p class="section-text">
+        Mi mayor motivación para seguir creciendo en el mundo tecnológico es mi madre,
+        quien me enseñó el valor del esfuerzo constante y la importancia de nunca dejar
+        de aprender.
+      </p>
+
+      <div class="hobbies-grid">
+        <span class="chip">Tecnología</span>
+        <span class="chip">Crear proyectos</span>
+        <span class="chip">Videojuegos</span>
+        <span class="chip">Lectura</span>
+        <span class="chip">Artes marciales</span>
+      </div>
+
+    </section>
+
+    <!-- =========================================================
+         SKILLS
+    ========================================================== -->
+    <section id="skills" class="section container reveal">
+
+      <h2 class="section-title">Habilidades</h2>
+
+      <div class="grid skills-grid">
+
+        <article class="card">
+          <h3>Backend</h3>
+          <p>Java, POO, servicios, validaciones, arquitectura por capas.</p>
+        </article>
+
+        <article class="card">
+          <h3>Bases de datos</h3>
+          <p>SQL Server, diseño ER, consultas, integridad y reportes.</p>
+        </article>
+
+        <article class="card">
+          <h3>Aprendizaje</h3>
+          <p>Interés constante en nuevas tecnologías y buenas prácticas.</p>
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- =========================================================
+         PROJECTS
+    ========================================================== -->
+    <section id="projects" class="section container reveal">
+
+      <h2 class="section-title">Proyectos</h2>
+
+      <div class="projects-grid">
+
+        <article class="card project-card">
+          <img
+            src="assets/img/ferreteriaSoto.jpg"
+            alt="FerreSys"
+            class="project-image"
+            loading="lazy"
+          />
+
+          <h3 class="project-title">FerreSys</h3>
+
+          <p class="project-description">
+            Sistema de gestión para ferretería con control de ventas,
+            usuarios, stock y auditoría.
+          </p>
+
+          <a
+            class="btn small outline"
+            href="https://github.com/AdrianPisco/ferresys.git"
+            target="_blank"
+          >
+            Ver repositorio
+          </a>
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- =========================================================
+         CONTACT
+    ========================================================== -->
+    <section id="contact" class="section container reveal">
+
+      <h2 class="section-title">¿Por qué trabajar conmigo?</h2>
+
+      <p class="contact-cta-text">
+        Aprendo rápido, soy constante y me tomo en serio cada proyecto.
+        Si buscas compromiso y crecimiento real, podemos trabajar juntos.
+      </p>
+
+      <div class="contact-actions">
+        <a class="btn primary" href="mailto:adrianpisco16@outlook.com">Escríbeme</a>
+        <a class="btn outline" href="#projects">Ver mi trabajo</a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> YACHAY.dev</p>
+      <p class="footer-status"><span class="mono">system:</span> running</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

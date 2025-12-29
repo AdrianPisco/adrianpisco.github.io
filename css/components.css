@@ -1,0 +1,426 @@
+/* ==========================================================================
+   COMPONENTS.CSS — YACHAY.dev
+   RESPONSABILIDAD:
+   - Componentes visuales reutilizables
+   - Terminal futurista (hero)
+   - HUD de identidad personal
+   - Cards (skills, proyectos, hobbies)
+   - CTA humano y motivacional
+   - UI moderna, limpia y consistente
+   ========================================================================== */
+
+
+/* ==========================================================================
+   HEADER / NAV
+   ========================================================================== */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 15, 30, 0.85);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.logo-mark {
+  font-family: var(--font-mono);
+  color: var(--primary);
+}
+
+.logo-text {
+  color: var(--text-primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+  font-weight: 600;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text-primary);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
+/* ==========================================================================
+   TERMINAL — HERO (BOOT SYSTEM)
+   ========================================================================== */
+
+.terminal {
+  position: relative;
+  background:
+    radial-gradient(
+      120% 120% at 0% 0%,
+      rgba(76, 201, 240, 0.14),
+      rgba(10, 15, 30, 0.94)
+    );
+  border: 1px solid rgba(76, 201, 240, 0.35);
+  border-radius: var(--radius-lg);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.04),
+    var(--shadow-lg);
+  overflow: hidden;
+}
+
+/* Base luminosa inferior para CTAs */
+.terminal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(76, 201, 240, 0.18),
+    transparent 45%
+  );
+  pointer-events: none;
+}
+
+/* Barra superior */
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: linear-gradient(
+    180deg,
+    rgba(15,23,42,0.96),
+    rgba(15,23,42,0.86)
+  );
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot--red    { background: #ef4444; }
+.dot--yellow { background: #facc15; }
+.dot--green  { background: #22c55e; }
+
+.terminal-title {
+  margin-left: auto;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--text-secondary);
+  opacity: 0.8;
+}
+
+/* Cuerpo */
+.terminal-body {
+  padding: var(--space-6);
+  display: grid;
+  gap: var(--space-3);
+}
+
+.terminal-line {
+  font-size: 14px;
+  color: var(--text-primary);
+  text-shadow: 0 0 6px rgba(34, 197, 94, 0.25);
+}
+
+.prompt {
+  color: var(--primary-accent);
+  margin-right: 6px;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  color: var(--primary-accent);
+}
+
+
+/* ==========================================================================
+   TERMINAL — SCANLINE (SISTEMA ACTIVO)
+   ========================================================================== */
+
+.terminal::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(34, 197, 94, 0.12) 50%,
+    transparent 100%
+  );
+  height: 120%;
+  transform: translateY(-100%);
+  animation: terminalScan 6s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes terminalScan {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+
+/* ==========================================================================
+   HERO TEXTO
+   ========================================================================== */
+
+.hero-title {
+  margin-top: var(--space-4);
+  font-size: clamp(42px, 5vw, 60px);
+  font-weight: 700;
+  line-height: 1.05;
+  color: var(--text-primary);
+}
+
+.hero-name {
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--primary-accent)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  max-width: 60ch;
+  margin-top: var(--space-3);
+  color: var(--text-secondary);
+}
+
+
+/* ==========================================================================
+   CTA / BOTONES HERO
+   ========================================================================== */
+
+.hero-actions {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+}
+
+.hero-actions .btn.primary {
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--primary-accent)
+  );
+  color: #020617;
+  text-shadow: 0 0 8px rgba(255,255,255,0.6);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.25),
+    0 0 26px rgba(76, 201, 240, 0.85),
+    0 16px 50px rgba(0,0,0,0.7);
+}
+
+.hero-actions .btn.primary:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.35),
+    0 0 34px rgba(76, 201, 240, 1),
+    0 24px 60px rgba(0,0,0,0.8);
+}
+
+.hero-links {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.link-chip {
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-secondary);
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.link-chip:hover {
+  background: rgba(255,255,255,0.08);
+  color: var(--text-primary);
+}
+
+
+/* ==========================================================================
+   HUD FOTO — IDENTIDAD PERSONAL
+   ========================================================================== */
+
+.hero-hud {
+  display: flex;
+  justify-content: center;
+}
+
+.hud-frame {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  padding: 14px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow:
+    0 0 0 1px rgba(76,201,240,0.25),
+    var(--shadow-lg);
+  isolation: isolate;
+}
+
+.hud-frame::before,
+.hud-frame::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--primary);
+}
+
+.hud-frame::before {
+  top: -6px;
+  left: -6px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.hud-frame::after {
+  bottom: -6px;
+  right: -6px;
+  border-left: none;
+  border-top: none;
+}
+
+.hud-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.08),
+    0 0 40px rgba(76,201,240,0.4);
+}
+
+.hud-scan {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(76,201,240,0.25),
+    transparent
+  );
+  animation: hud-scan 4s linear infinite;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+@keyframes hud-scan {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.hud-tag {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 14px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  background: rgba(15,23,42,0.9);
+  border: 1px solid var(--border);
+  color: var(--primary-accent);
+}
+
+
+/* ==========================================================================
+   CARDS — SKILLS / PROYECTOS / HOBBIES
+   ========================================================================== */
+
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.02)
+  );
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.project-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-4);
+}
+
+
+/* ==========================================================================
+   CONTACT — HUMANO / MOTIVACIONAL
+   ========================================================================== */
+
+.contact-cta {
+  background: linear-gradient(
+    135deg,
+    rgba(76,201,240,0.18),
+    rgba(34,197,94,0.18)
+  );
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-7);
+}
+
+.contact-cta-text {
+  font-size: 18px;
+  color: var(--text-primary);
+  margin-bottom: var(--space-5);
+}
+
+/* Quitar focus visual SOLO del logo */
+.logo:focus,
+.logo:focus-visible {
+  outline: none;
+  box-shadow: none;
+}

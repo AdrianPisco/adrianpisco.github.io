@@ -1,0 +1,219 @@
+/* ==========================================================================
+   RESPONSIVE.CSS — YACHAY.dev
+   RESPONSABILIDAD:
+   - Adaptar layout y componentes a distintos tamaños
+   - Mantener estética futurista sin perder jerarquía
+   - Priorizar legibilidad, aire y presencia visual
+   ========================================================================== */
+
+
+/* ==========================================================================
+   LARGE SCREENS / SMALL LAPTOPS (≤ 1200px)
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+
+  /* HERO */
+  .hero-grid {
+    gap: var(--space-7);
+  }
+
+  .hero-title {
+    font-size: clamp(38px, 5vw, 54px);
+  }
+
+  /* HUD */
+  .hud-frame {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+
+/* ==========================================================================
+   TABLETS / LANDSCAPE (≤ 992px)
+   ========================================================================== */
+
+@media (max-width: 992px) {
+
+  /* NAV */
+  .nav-links {
+    gap: var(--space-4);
+  }
+
+  /* HERO */
+  .hero {
+    padding-block: calc(var(--space-8) - 16px);
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+    text-align: center;
+  }
+
+  .hero-panel {
+    order: 1;
+  }
+
+  .hero-hud {
+    order: 2;
+    justify-content: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-links {
+    justify-content: center;
+  }
+
+  /* TERMINAL */
+  .terminal-body {
+    padding: var(--space-5);
+  }
+
+  /* PROJECTS */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* CONTACT */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+}
+
+
+/* ==========================================================================
+   TABLETS / PORTRAIT & LARGE MOBILE (≤ 768px)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+  /* HEADER */
+  .nav {
+    height: 64px;
+  }
+
+  .nav-links {
+    display: none; /* menú móvil se puede agregar luego */
+  }
+
+  /* HERO */
+  .hero {
+    padding-block: var(--space-7);
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+    margin-inline: auto;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* TERMINAL */
+  .terminal {
+    border-radius: var(--radius-md);
+  }
+
+  .terminal-body {
+    padding: var(--space-4);
+  }
+
+  .terminal-line {
+    font-size: 13px;
+  }
+
+  /* HUD */
+  .hud-frame {
+    width: 240px;
+    height: 240px;
+  }
+
+  .hud-tag {
+    font-size: 11px;
+  }
+
+  /* SECTIONS */
+  .section {
+    padding-block: var(--space-7);
+  }
+
+  /* CARDS */
+  .card {
+    padding: var(--space-5);
+  }
+
+  /* PROJECTS */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CONTACT */
+  .contact-cta {
+    padding: var(--space-6);
+  }
+
+  .contact-cta-text {
+    font-size: 16px;
+  }
+}
+
+
+/* ==========================================================================
+   SMALL MOBILE (≤ 480px)
+   ========================================================================== */
+
+@media (max-width: 480px) {
+
+  /* HERO */
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-name {
+    display: inline-block;
+  }
+
+  /* TERMINAL */
+  .terminal-body {
+    padding: var(--space-4);
+  }
+
+  .terminal-line {
+    font-size: 12px;
+  }
+
+  /* HUD */
+  .hud-frame {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* BUTTONS */
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* FOOTER */
+  .footer {
+    font-size: 13px;
+    text-align: center;
+  }
+}

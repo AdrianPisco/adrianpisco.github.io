@@ -1,0 +1,201 @@
+/* ==========================================================================
+   LAYOUT.CSS — YACHAY.dev
+   RESPONSABILIDAD:
+   - Estructura del sitio
+   - Contenedores
+   - Grillas reutilizables
+   - Ritmo vertical
+   - Utilidades de layout
+   - Animaciones estructurales (NO visuales)
+   ========================================================================== */
+
+
+/* ==========================================================================
+   CONTAINER GLOBAL
+   ========================================================================== */
+
+.container {
+  width: min(100% - 48px, var(--container-max));
+  margin-inline: auto;
+}
+
+
+/* ==========================================================================
+   SECCIONES
+   - Ritmo vertical amplio
+   - Sensación premium / futurista
+   ========================================================================== */
+
+.section {
+  position: relative;
+  padding-block: var(--space-8);
+}
+
+/* Hero tiene respiración especial */
+.hero {
+  padding-block: calc(var(--space-8) + var(--space-4));
+}
+
+
+/* ==========================================================================
+   GRID BASE (REUTILIZABLE)
+   ========================================================================== */
+
+.grid {
+  display: grid;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+
+/* ==========================================================================
+   HERO GRID
+   - Terminal + HUD
+   ========================================================================== */
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+
+/* ==========================================================================
+   SKILLS GRID
+   ========================================================================== */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-6);
+}
+
+
+/* ==========================================================================
+   PROJECTS GRID
+   - 3 columnas desktop
+   - Escala en responsive
+   ========================================================================== */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+
+/* ==========================================================================
+   CONTACT GRID
+   ========================================================================== */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-7);
+  margin-top: var(--space-6);
+}
+
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+
+/* ==========================================================================
+   UTILIDADES DE LAYOUT
+   ========================================================================== */
+
+.center {
+  display: grid;
+  place-items: center;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.stack-lg {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+
+/* ==========================================================================
+   REVEAL (ANIMACIÓN ESTRUCTURAL)
+   - Controlada por JS (IntersectionObserver)
+   ========================================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ==========================================================================
+   RESPONSIVE — TABLET
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    text-align: center;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* ==========================================================================
+   RESPONSIVE — MOBILE
+   ========================================================================== */
+
+@media (max-width: 640px) {
+
+  .container {
+    width: min(100% - 32px, var(--container-max));
+  }
+
+  .section {
+    padding-block: var(--space-7);
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    justify-content: center;
+    text-align: center;
+  }
+
+}
